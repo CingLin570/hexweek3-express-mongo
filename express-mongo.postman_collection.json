@@ -1,0 +1,116 @@
+{
+	"info": {
+		"_postman_id": "bdec6dad-5afe-4a21-a9ec-686690835b99",
+		"name": "express-mongo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "新增單筆貼文",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"員工弟弟\",\r\n    \"type\": \"person\",\r\n    \"tags\": [\"帥哥\",\"店草\"],\r\n    \"content\": \"這家店草真的好帥\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://stormy-sea-91511.herokuapp.com/posts",
+					"protocol": "https",
+					"host": [
+						"stormy-sea-91511",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "取得全部貼文",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "刪除全部貼文",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://stormy-sea-91511.herokuapp.com/posts",
+					"protocol": "https",
+					"host": [
+						"stormy-sea-91511",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除單筆貼文",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3005/posts/626a9910cc71c4b2648b55ee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"posts",
+						"626a9910cc71c4b2648b55ee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "編輯單筆貼文",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"content\": \"我覺得還好\",\r\n    \"likes\":1234\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3005/posts/626a9910cc71c4b2648b55ee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"posts",
+						"626a9910cc71c4b2648b55ee"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
