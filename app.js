@@ -24,20 +24,23 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/posts', postsRouter);
 
-// catch 404 and forward to error handler
+// 捕捉404錯誤並前往錯誤處理程序
 app.use(function(req, res, next) {
   next(createError(404));
 });
 
-// error handler
+// 錯誤處理程序
 app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
+  // 本地開發環境錯誤處理程序
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-  // render the error page
+  // 用JSON顯示錯誤
   res.status(err.status || 500);
-  res.render('error');
+  res.json({
+    message: err.message,
+    error: err
+  });
 });
 
 module.exports = app;
