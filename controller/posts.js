@@ -8,8 +8,7 @@ const posts = {
   },
   async createPosts(req, res) {
     try {
-      const data = req.body;
-      let { name, content, type, tags } = data;
+      let { name, content, type, tags } = req.body;
       if(content) {
         const newPost = await Post.create({
           name,
@@ -51,8 +50,7 @@ const posts = {
   async updatePosts(req, res) {
     try {
       const id = req.params.id;
-      const data = req.body;
-      let { content, image, likes, type, tags } = data;
+      let { content, image, likes, type, tags } = req.body;
       if(content) {
         const post = await Post.findByIdAndUpdate(id, {
           $set: {
