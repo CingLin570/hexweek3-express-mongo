@@ -39,7 +39,18 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": null
+				"url": {
+					"raw": "https://stormy-sea-91511.herokuapp.com/posts",
+					"protocol": "https",
+					"host": [
+						"stormy-sea-91511",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
 			},
 			"response": []
 		},
@@ -69,15 +80,16 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3005/posts/626a9910cc71c4b2648b55ee",
-					"protocol": "http",
+					"raw": "https://stormy-sea-91511.herokuapp.com/posts/62739f2d5f083337c47d38f9",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"stormy-sea-91511",
+						"herokuapp",
+						"com"
 					],
-					"port": "3005",
 					"path": [
 						"posts",
-						"626a9910cc71c4b2648b55ee"
+						"62739f2d5f083337c47d38f9"
 					]
 				}
 			},
@@ -98,15 +110,16 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3005/posts/626a9910cc71c4b2648b55ee",
-					"protocol": "http",
+					"raw": "https://stormy-sea-91511.herokuapp.com/posts/62739f2d5f083337c47d38f9",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"stormy-sea-91511",
+						"herokuapp",
+						"com"
 					],
-					"port": "3005",
 					"path": [
 						"posts",
-						"626a9910cc71c4b2648b55ee"
+						"62739f2d5f083337c47d38f9"
 					]
 				}
 			},
